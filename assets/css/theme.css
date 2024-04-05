@@ -84,7 +84,7 @@ body {
 
 .img-our-focus {
   height: 450px;
-  width: 400px
+  width: 420px
 }
 .logo {
   height: 100px;
@@ -18740,8 +18740,17 @@ label {
   background-color: #081131 !important;
 }
 
+.img-project {
+  height: 200px; 
+  width: 420px;
+}
+
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
 
 /*# sourceMappingURL=theme.css.map */
+.line-space {
+   line-height: 1.5
+   
+}
