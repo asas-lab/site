@@ -18760,3 +18760,58 @@ label {
     display: none;
   }
 }
+
+.publications {
+
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.publication {
+    margin-bottom: 40px;
+}
+
+.publication h2 {
+    font-size: 1em;
+    color: #005b9f;
+    margin-bottom: 5px;
+}
+
+.publication .title {
+    font-size: 1.5em;
+    color: #333333;
+    font-weight: bolder;
+    margin: 5px 0;
+}
+
+.publication .journal {
+    font-size: 1em;
+    color: #666666;
+}
+
+a {
+  color: black;
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 1px solid #bbb;
+}
