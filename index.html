@@ -1,643 +1,773 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASAS AI | Artificial Intelligence and Consulting in Saudi Arabia - Riyadh, Jeddah, Dammam, Mecca | الذكاء الاصطناعي والاستشارات في السعودية | AI Consulting Saudi Arabia</title>
+    <meta name="description" content="ASAS - Leading AI consulting services in Saudi Arabia. Expert artificial intelligence solutions and consulting in Riyadh, Jeddah, Dammam, and Mecca. خدمات استشارات الذكاء الاصطناعي في المملكة العربية السعودية">
+    <meta name="keywords" content="AI consulting, artificial intelligence, Saudi Arabia, Riyadh, Jeddah, Dammam, Mecca, الذكاء الاصطناعي, استشارات, السعودية, الرياض, جدة, الدمام, مكة">
+    <meta property="og:title" content="ASAS | AI Consulting Saudi Arabia">
+    <meta property="og:description" content="Leading AI consulting services across Saudi Arabia. Expert artificial intelligence solutions and consulting.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English, Arabic">
+    <script>
+        // Create favicon programmatically
+        const favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        favicon.type = 'image/svg+xml';
+        favicon.href = `data:image/svg+xml,${encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <rect width="100" height="100" fill="black"/>
+                <svg x="20" y="20" width="60" height="60" viewBox="0 0 50 51">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.8175 50.6049L36.5893 39.7634L9.67463 50.6049H0.888916L20.8175 0.604919H29.6032L49.6032 50.6049H40.8175ZM34.1285 33.4536L25.2461 10.6782L12.9618 42.1763L34.1285 33.4536Z" fill="white"/>
+                </svg>
+            </svg>
+        `)}`;
+        document.head.appendChild(favicon);
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+        }
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>asas.ai</title>
+        .logo-container {
+            position: relative;
+            width: 80vw;
+        }
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <!-- <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href=""
-    /> -->
+        .logo {
+            width: 100%;
+            height: auto;
+            fill: rgba(255, 255, 255, clamp(0.02, 0.08 - (0.06 * (100vw / 1000)), 0.08));
+            stroke: rgba(255, 255, 255, 0.1);
+            stroke-width: 0.5px;    
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+            transition: filter 0.3s ease;
+        }
 
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link
-      rel="stylesheet"
-      crossorigin="anonymous"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    />
-    <link href="assets/css/theme.css" rel="stylesheet" />
+        .email {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        h1 {
+            margin-top: 32px;
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            opacity: 0.95;
+        }
 
-    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
-  </head>
+        .cta-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
 
-  <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      <div class="top-section">
-        <nav class="navbar">
-          <div class="container-fluid">
-            <a class="" href="index.html">
-              <img class="logo" src="assets/img/logo_w_s.png" alt="..." />
-            </a>
-            <ul class="">
-              <li class="nav-item p-2">
-                <a href="https://twitter.com/Asaslab" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-twitter"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <!-- <li class="nav-item p-2">
-                <a href="" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-discord"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
-                    />
-                  </svg>
-                </a>
-              </li> -->
-              <li class="nav-item p-2">
-                <a
-                  href="https://www.linkedin.com/company/asas-lab/"
-                  target="_blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="bi bi-linkedin"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        .cta-button {
+            padding: 12px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            transition: border-color 0.3s ease;
+            position: relative;
+        }
 
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="mt-3">
-          <div class="container">
-            <div class="row mb-9 text-center">
-              <div class="col-md-12 col-lg-12 col-xl-12">
-                <p class="display-3 lh-sm">AGI is not our goal</p>
-                <p class="display-7 pt-7">
-                  Building a safe and beneficial AI for the MENA region is our
-                  mission.
-                </p>
-                <a class="btn btn-info mt-6" href="vision.html" role="button"
-                  >Read our vision</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- end of .container-->
-        </section>
-      </div>
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 4px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.01);
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+            pointer-events: none;
+            transition: border-color 0.3s ease;
+        }
 
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+        .cta-button:hover::before {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-        <div class="container">
-          <!-- <div class="row">
-            <div class="col-lg-6 col-md-6 col-s-6">
-              <h2 class="text-1000 m-6 pt-4 line-space">
-                We conduct fundamental research, offer consultancy, and build
-                creative AI technologies and solutions for the Arabic language
-                and its people
-              </h2>
-            </div> -->
+        .cta-button:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+        }
 
-          <!-- <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="p-2 text-center">
-                <img
-                  src="assets/img/gallery/A cave painting depicting a group of early humans .jpg"
-                  class="rounded-3 float-right img-our-focus"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div> -->
+        .content-box {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+            /* background: rgba(255, 255, 255, 0.03); */
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-          <div class="row">
-            <h1 class="display-6 fw-semi-bold text-center">Practice Areas</h1>
-          </div>
-
-          <div class="row mt-6">
-            <div class="col-md-6">
-              <div class="p-3">
-                <h2 class="pt-3 lh-base">Scientific Research</h2>
-                <p>
-                  We conduct empirical research on various aspects of AI and we
-                  strive to publish our work in top-tier conferences and
-                  journals.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="p-3">
-                <h2 class="pt-3 lh-base">Tools and Products</h2>
-                <p>
-                  AI is changing how we work and do business. Through leveraging
-                  cutting-edge technologies, we build advanced tools and
-                  products that add value to people’s lives.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <div class="p-3">
-                <h2 class="pt-3 lh-base">Consulting Services</h2>
-                <p>
-                  Our community has a wide range of AI expertise and our
-                  developers are very talented and eager to share their
-                  knowledge and skills to help build solutions customized for
-                  your organization needs
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-3">
-                <h2 class="pt-3 lh-base">AI Ethics and Responsibility</h2>
-                <p class="mb-0">
-                  AI systems can have positive impact on our lives but also can
-                  have risks. In building our AI systems, we comply with the
-                  seven AI Ethics Principles proposed by SDAIA. We aslo do
-                  research on algorithmic bias and risk.
-                </p>
-              </div>
-            </div>
-          </div>
+        .tagline {
+            font-size: 18px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="logo-container">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="565" height="175" viewBox="0 0 565 175" >
+                <path d="M134.345 171.037L134.469 171.355H134.811H164.06H164.799L164.525 170.669L97.9402 4.20808L97.8145 3.89377H97.476H96.7808H96.0492H69.891H69.1593H68.2263H67.8874L67.7619 4.20865L1.41517 170.67L1.1421 171.355H1.87964H31.1293H31.2262L31.3161 171.319L120.452 135.414L134.345 171.037ZM42.9636 141.887L82.9701 39.306L111.898 113.479L42.9636 141.887ZM197.506 171.098L197.509 171.098C204.851 173.174 212.904 174.209 221.663 174.209C234.554 174.209 245.49 172.14 254.45 167.98C263.561 163.824 270.459 158.057 275.115 150.671C279.768 143.29 282.089 134.793 282.089 125.197C282.089 114.275 277.907 104.328 269.589 95.3695C261.263 86.403 249.595 80.101 234.623 76.4377L234.622 76.4376L214.174 71.4444C214.174 71.4444 214.174 71.4443 214.173 71.4443C207.25 69.7132 201.777 67.2044 197.729 63.9375C193.898 60.5617 191.962 55.876 191.962 49.8139C191.962 42.329 194.449 36.5342 199.391 32.3635C204.507 28.179 211.515 26.0581 220.474 26.0581C229.113 26.0581 236.299 28.0991 242.064 32.1501C247.852 36.2177 251.908 41.37 254.249 47.6115L254.416 48.0578L254.87 47.9119L281.504 39.3511L281.995 39.1933L281.822 38.7075C279.262 31.5089 275.343 25.1089 270.065 19.5108C264.777 13.7433 258.055 9.26528 249.911 6.07074C241.912 2.71199 232.571 1.04016 221.9 1.04016C202.965 1.04016 188.326 5.4155 178.058 14.2386C167.781 22.911 162.663 35.1102 162.663 50.7651C162.663 59.0806 164.423 66.3044 167.962 72.4179L167.967 72.4262C171.655 78.5187 176.624 83.567 182.869 87.5698L182.874 87.5728C189.26 91.5646 196.362 94.5957 204.175 96.6686L204.179 96.6697L224.628 101.901C224.629 101.901 224.629 101.901 224.629 101.901C233.143 104.109 239.888 107.253 244.89 111.317L244.897 111.323C249.851 115.193 252.315 120.201 252.315 126.386C252.315 133.189 249.39 138.669 243.488 142.862C237.577 147.063 229.528 149.19 219.289 149.191C210.497 149.033 203.153 146.758 197.228 142.392C191.268 138 187.296 132.925 185.275 127.172L185.116 126.718L184.656 126.859L157.547 135.182L157.076 135.327L157.214 135.8C158.66 140.78 161.147 145.591 164.667 150.231L164.673 150.238L164.679 150.246C168.36 154.727 172.915 158.801 178.34 162.471L178.346 162.474C183.941 166.151 190.329 169.024 197.506 171.098ZM412.871 171.037L412.995 171.355H413.336H442.586H443.325L443.05 170.669L376.466 4.20808L376.34 3.89377H376.002H375.306H374.575H348.417H347.685H346.752H346.413L346.287 4.20865L279.941 170.67L279.668 171.355H280.405H309.655H309.752L309.842 171.319L398.978 135.414L412.871 171.037ZM321.306 142.357L361.496 39.306L390.454 113.557L321.306 142.357ZM479.149 171.098L479.152 171.098C486.494 173.174 494.547 174.209 503.306 174.209C516.197 174.209 527.133 172.14 536.093 167.98C545.204 163.824 552.102 158.057 556.758 150.671C561.411 143.29 563.732 134.793 563.732 125.197C563.732 114.275 559.55 104.328 551.232 95.3695C542.906 86.403 531.238 80.101 516.266 76.4377L516.163 76.8562L516.265 76.4376L495.817 71.4444C495.817 71.4443 495.816 71.4442 495.816 71.4441C488.892 69.7131 483.42 67.2043 479.372 63.9375C475.541 60.5617 473.605 55.876 473.605 49.8139C473.605 42.3288 476.093 36.5338 481.034 32.363C486.15 28.1789 493.158 26.0581 502.117 26.0581C510.756 26.0581 517.942 28.0991 523.707 32.1501C529.495 36.2177 533.551 41.37 535.892 47.6115L536.059 48.0578L536.513 47.9119L563.147 39.3511L563.638 39.1933L563.465 38.7075C560.905 31.5084 556.985 25.108 551.707 19.5096C546.419 13.7426 539.698 9.26489 531.554 6.07056C523.555 2.71193 514.214 1.04016 503.543 1.04016C484.608 1.04016 469.969 5.4155 459.701 14.2386C449.424 22.911 444.306 35.1102 444.306 50.7651C444.306 59.0806 446.066 66.3044 449.605 72.4179L449.61 72.4262C453.298 78.5187 458.267 83.567 464.512 87.5698L464.517 87.5728C470.903 91.5646 478.005 94.5957 485.818 96.6686L485.822 96.6697L506.271 101.901C514.786 104.108 521.531 107.253 526.533 111.317L526.54 111.323C531.494 115.193 533.958 120.201 533.958 126.386C533.958 133.189 531.033 138.669 525.131 142.862C519.22 147.063 511.171 149.19 500.932 149.191C492.14 149.033 484.796 146.758 478.871 142.392C472.911 138 468.939 132.925 466.918 127.172L466.759 126.718L466.299 126.859L439.19 135.182L438.719 135.327L438.857 135.8C440.303 140.78 442.79 145.591 446.31 150.231L446.316 150.238L446.322 150.246C450.003 154.727 454.558 158.801 459.983 162.471L459.989 162.474C465.584 166.151 471.972 169.024 479.149 171.098Z"/>
+       </svg>    
         </div>
-        <!-- end of .container-->
-      </section>
-      <section>
-        <div class="container">
-          <div class="row">
-            <h1 class="display-6 fw-semi-bold text-center">Publications</h1>
-            <div class="publications col-lg-10 col-md-6 col-sm-6 mt-2">
-              <div class="publication">
-                <h2>AceGPT Team</h2>
-                <p class="title">
-                  <a href="https://huggingface.co/FreedomIntelligence/AceGPT-v2-32B-Chat/blob/main/Second_Language__Arabic__Acquisition_of_LLMs_via_Progressive_Vocabulary_Expansion.pdf">
-              Second Language (Arabic) Acquisition of LLMs via Progressive Vocabulary Expansion
-                  </a>
-                </p>
-                <p class="journal">preprint</p>
-                <hr class="solid">
-              </div>
-              <div class="publication">
-                <h2>Data Provenance Initiative Team</h2>
-                <p class="title">
-                  <a href="https://www.dataprovenance.org/consent-in-crisis-paper">
-              Consent in Crisis:The Rapid Decline of the AI Data Commonsg
-                  </a>
-                </p>
-                <p class="journal">preprint</p>
-                <hr class="solid">
-              </div>
-              <div class="publication">
-              <h2>Aya Team</h2>
-              <p class="title">
-                <a href="https://arxiv.org/abs/2402.06619">
-                  Aya Dataset: An Open-Access Collection for Multilingual
-                  Instruction Tuning
-                </a>
-              </p>
-              <p class="journal">ACL24</p> 
-              <hr class="solid">
-            </div>
 
-            <div class="publication">
-              <h2>
-                EMAD A. ALGHAMDI, REEM I. MASOUD, DEEMA ALNUHAIT, AFNAN Y.
-                ALOMAIRI, AHMED ASHRAF, MOHAMED ZAYTOON
-              </h2>
-              <p class="title">
-                <a href="https://arxiv.org/abs/2403.09017">
-                  AraTrust: An Evaluation of Trustworthiness for LLMs in Arabic
-                </a>
-              </p>
-              <p class="journal">DMLR @ICML 2024</p>
-              <hr class="solid">
+        <div class="content-box">
+            <h1>Developing Frontier AI fit for MENA</h1>
+            <p class="tagline">Imagine AI that truly understands you - your language, your culture, your aspirations. For too long, the MENA region has adapted to technology. Now, we're crafting AI that adapts to you. Join us as we build tools that don't just work in Arabic, but think in it. Because the future of AI shouldn't just be accessible - it should feel like home.</p>
+            <div class="cta-container">
+                <a href="" class="cta-button">Learn More</a>
+                <a href="" class="cta-button">Try our AI ↗</a>
             </div>
-            <div class="publication">
-              <h2>EMAD A. ALGHAMDI, JEZIA ZAKRAOUI, FARES A. ABANMY</h2>
-              <p class="title">
-                <a href="https://arxiv.org/abs/2309.12863">
-                  Domain Adaptation for Arabic Machine Translation: The Case of
-                  Financial Text
-                </a>
-              </p>
-              <p class="journal">preprint</p>
-              <hr class="solid">
-            </div>
-            <div class="publication">
-              <h2>
-                AHMED Y. RADWAN, KHALED M. ALASMARI, OMAR A. ABDULBAGI, EMAD A.
-                ALGHAMDI
-              </h2>
-              <p class="title">
-                <a href="https://www.arxiv.org/abs/2403.01575">
-                  SARD: A Human-AI Collaborative Story Generation
-                </a>
-              </p>
-              <p class="journal">HCII2024</p>
-            </div>
-
-          </div>
         </div>
-      </section>
 
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+    </div>
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section class="mt-5">
-        <div class="container">
-          <div class="text-center">
-            <div class="p-5 bg-primary rounded-3">
-              <div class="py-3">
-                <h4 class="opacity-50 ls-2 lh-base fw-medium">
-                  READY TO START
-                </h4>
-                <h2 class="mt-3 fs-4 fs-sm-7 latter-sp-3 lh-base fw-semi-bold">
-                  Start Your Free Trail Today
-                </h2>
-              </div>
-              <div class="flex-center d-flex">
-                <button class="btn btn-info">
-                  Get Started <span class="fas fa-arrow-right"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-      <!-- </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+    <script>
+        class LightingEffect {
+            constructor() {
+                this.svg = document.querySelector('.logo');
+                this.path = this.svg.querySelector('path');
+                this.mouse = { x: window.innerWidth/2, y: window.innerHeight/2 };
+                this.isMouseMoving = false;
+                this.mouseTimeout = null;
+                this.lastRender = 0;
+                this.fps = 60;
+                this.fpsInterval = 1000 / this.fps;
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section class="mt-5"> 
-        <div class="container">
-          <div class="text-center">
-            <p class="fs-2 ls-2">SAFLOW</p>
-            <h1 class="display-6 fw-semi-bold">How does it work?</h1>
-          </div>
-          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
-            <div class="col-md-7 col-lg-6 order-md-1">
-              <img
-                class="w-100"
-                src="assets/img/gallery/comment1.png"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-5 col-lg-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">
-                How does it work?
-              </h3>
-              <p class="fs-xl-1 ls-3 pe-xl-2">
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results.
-              </p>
-            </div>
-          </div>
-          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
-            <div class="col-md-7 col-lg-6 false">
-              <img
-                class="w-100"
-                src="assets/img/gallery/comment2.png"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-5 col-lg-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">
-                How does it work?
-              </h3>
-              <p class="fs-xl-1 ls-3 pe-xl-2">
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results.
-              </p>
-            </div>
-          </div>
-          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
-            <div class="col-md-7 col-lg-6 order-md-1">
-              <img
-                class="w-100"
-                src="assets/img/gallery/comment3.png"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-5 col-lg-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">
-                How does it work?
-              </h3>
-              <p class="fs-xl-1 ls-3 pe-xl-2">
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-      <!-- </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                // Vector field configuration
+                this.vectorPoints = [];
+                this.vectorSpacing = 50;
+                this.influenceRadius = window.innerWidth * 0.05;
+                this.blendFactor = 0.3;
+                this.vectorFieldStrength = 2.5;
+                this.vectorField = {
+                    density: 0.85,      // Increased density for more detail
+                    smoothing: 0.35,    // Slightly reduced smoothing for crisper effect
+                    flowSpeed: 0.8,     // Increased flow speed for more dynamic movement
+                    turbulence: 0.15,   // Added subtle turbulence for organic feel
+                    fadeSpeed: 0.92,    // New: Controls how quickly effects fade
+                    reactivity: 0.75,   // New: How strongly field reacts to mouse
+                    coherence: 0.8      // New: How much vectors influence neighbors
+                };
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section>
-        <div class="container-lg">
-          <div class="text-center">
-            <p class="fs-2 ls-2">SAFLOW</p>
-            <h1 class="display-6 fw-semi-bold">Pricing</h1>
-          </div>
-          <div class="row flex-center">
-            <div class="col-sm-9 col-md-4 mt-3">
-              <div
-                class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9"
-              >
-                <p class="fs-2 ls-2">FREE</p>
-                <h1 class="display-4 ls-3"><span class="text-600">$</span>0</h1>
-                <hr class="hr mt-6 text-1000" />
-                <ul class="mt-5 ps-0">
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >7,000,000+ Events
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4
-                    Custom Domains
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >Dedicated Support
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12
-                    Months History
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1
-                    Dedicated SSL
-                  </li>
-                </ul>
-                <button class="btn btn-gray mt-4">
-                  Get Started <span class="fas fa-arrow-right"></span>
-                </button>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4 mt-3">
-              <div
-                class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-0"
-              >
-                <p class="fs-2 ls-2">BASIC</p>
-                <h1 class="display-4 ls-3">
-                  <span class="text-600">$</span>23
-                </h1>
-                <hr class="hr mt-6 text-1000" />
-                <ul class="mt-5 ps-0">
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >7,000,000+ Events
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4
-                    Custom Domains
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >Dedicated Support
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12
-                    Months History
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1
-                    Dedicated SSL
-                  </li>
-                </ul>
-                <button class="btn btn-gray mt-4">
-                  Get Started <span class="fas fa-arrow-right"></span>
-                </button>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4 mt-3">
-              <div
-                class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9"
-              >
-                <p class="fs-2 ls-2">PREMIUM</p>
-                <h1 class="display-4 ls-3">
-                  <span class="text-600">$</span>59
-                </h1>
-                <hr class="hr mt-6 text-1000" />
-                <ul class="mt-5 ps-0">
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >7,000,000+ Events
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4
-                    Custom Domains
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i
-                    >Dedicated Support
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12
-                    Months History
-                  </li>
-                  <li class="pricing-lists">
-                    <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1
-                    Dedicated SSL
-                  </li>
-                </ul>
-                <button class="btn btn-gray mt-4">
-                  Get Started <span class="fas fa-arrow-right"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-      <!-- </section>  -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                // Orbital configurations
+                this.orbitalConfigs = [
+                    { angle: 0, radiusVw: 30, speed: 0.002, intensity: 0.7 },
+                    { angle: Math.PI / 3, radiusVw: 20, speed: -0.002, intensity: 0.5 },
+                    { angle: Math.PI / 2, radiusVw: 20, speed: 0.004, intensity: 0.6 },
+                    { angle: Math.PI, radiusVw: 25, speed: 0.003, intensity: 0.8 },
+                    { angle: Math.PI * 1.2, radiusVw: 35, speed: -0.001, intensity: 0.4 },
+                    { angle: Math.PI * 1.5, radiusVw: 55, speed: 0.005, intensity: 0.9 },
+                    { angle: Math.PI * 1.8, radiusVw: 40, speed: -0.003, intensity: 0.3 }
+                ];
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-        <div class="container">
-          <div class="text-center text-xl-start">
-            <div
-              class="p-5 bg-900 rounded-3 d-flex flex-column justify-content-xl-between flex-xl-row"
-            >
-              <div class="py-3">
-                <h5 class="mt-3 fs-4 fc-w lh-base fw-semi-bold">
-                  Join us in building the foundations for the future of
-                  technology in the MENA region
-                </h5>
-              </div>
-              <div class="flex-center d-flex">
-                <a
-                  class="btn btn-primary"
-                  href="https://fm.addxt.com/form/?vf=1FAIpQLSeaoC5AywyMVsmrosm1W69YBozE4AfyBteLz8VtdduigK4FlQ"
-                  target="_blank"
-                >
-                  Join us <span class="fas fa-arrow-right"></span
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                // Initialize orbital systems
+                this.orbitalSystems = [];
+                this.updateOrbitalSystems();
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section>
-        <div class="row pt-8">
-          <h1 class="display-6 fw-semi-bold offset-1">Products</h1>
-          </div>
-      </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                // Improved button tracking
+                this.buttons = document.querySelectorAll('.cta-button');
+                this.buttonStates = new Map();
+                this.initializeButtonTracking();
+                
+                // Debounced resize handler
+                this.debouncedResize = this.debounce(this.handleResize.bind(this), 150);
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-        <div class="container">
-          <div class="row mx-md-5 px-md-5 d-flex justify-content-evenly mb-4">
-            <div class="col-md-4 col-sm-6 col-lg-auto mt-5 mt-lg-0 text-center">
-              <img
-                src="assets/img/gallery/brands/SAGE_Logo.png"
-                alt="Sage"
-                style="height: 60px"
-              />
-            </div>
-            <div class="col-md-4 col-sm-6 col-lg-auto mt-5 mt-lg-0 text-center">
-              <img
-                src="assets/img/gallery/brands/KAU_logo.png"
-                alt="KAU"
-                style="height: 100px"
-              />
-            </div>
-            <div class="col-md-4 col-sm-6 col-lg-auto mt-5 mt-lg-0 text-center">
-              <img
-                src="assets/img/gallery/brands/culture_logo.png"
-                alt="Amazon"
-                style="height: 80px"
-              />
-            </div>
-            <div class="col-md-4 col-sm-6 col-lg-auto mt-5 mt-lg-0 text-center">
-              <img
-                src="assets/img/gallery/brands/cohere.png"
-                alt="Amazon"
-                style="height: 80px"
-              />
-            </div>
-            <div class="col-md-4 col-sm-6 col-lg-auto mt-5 mt-lg-0 text-center">
-              <img
-                src="assets/img/gallery/brands/kaust.png"
-                alt="Amazon"
-                style="height: 80px"
-              />
-            </div>
-          </div>
-          <div class="px-xl-8 px-md-7">
-            <!-- <hr class="mt-7 text-1000" /> -->
-          </div>
-        </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+                this.init();
+            }
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="bg-primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-xl-12 pt-2 pt-xl-12 text-center">
-              <!-- <p class="mb-0 text-center text-xl-end"> -->
-              <!-- <a class="text-300 text-decoration-none footer-link" href="#!">
-                  Terms &amp; conditon </a
-                ><a
-                  class="text-300 text-decoration-none footer-link ps-4"
-                  href="#!"
-                  >Privacy Policy
-                </a> -->
-              <a class="" href="index.html">
-                <img class="img-fluid" src="assets/img/logo_w.png" alt="..." />
-              </a>
-              <!-- </p> -->
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+            initializeButtonTracking() {
+                this.buttons.forEach(button => {
+                    // Create initial state for each button
+                    const buttonState = {
+                        element: button,
+                        rect: button.getBoundingClientRect(),
+                        rays: this.generateButtonRays(button),
+                        intensity: 0,
+                        isHovered: false
+                    };
+                    
+                    this.buttonStates.set(button, buttonState);
 
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="vendors/swiper/swiper-bundle.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="assets/js/theme.js"></script>
+                    // Add event listeners for each button
+                    button.addEventListener('mouseenter', () => this.handleButtonHover(button, true));
+                    button.addEventListener('mouseleave', () => this.handleButtonHover(button, false));
+                });
+            }
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap"
-      rel="stylesheet"
-    />
-  </body>
+            generateButtonRays(button) {
+                const rect = button.getBoundingClientRect();
+                const rays = new Array(24); // Reduced ray count for better performance
+                const radius = Math.max(rect.width, rect.height) / 2;
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                // Pre-calculate constants
+                const angleIncrement = (Math.PI * 2) / rays.length;
+                const initialLength = radius * 0.5;
+                
+                // Use a single loop with direct array assignment
+                for (let i = 0; i < rays.length; i++) {
+                    const angle = i * angleIncrement;
+                    // Cache trig calculations
+                    const cos = Math.cos(angle);
+                    const sin = Math.sin(angle);
+                    
+                    rays[i] = {
+                        angle,
+                        baseX: centerX + cos * radius,
+                        baseY: centerY + sin * radius,
+                        intensity: 0,
+                        length: initialLength,
+                        // Cache these values to avoid recalculating later
+                        cos,
+                        sin
+                    };
+                }
+                
+                return rays;
+            }
+
+            handleButtonHover(button, isHovered) {
+                const state = this.buttonStates.get(button);
+                if (state) {
+                    state.isHovered = isHovered;
+                    state.intensity = isHovered ? 1 : 0;
+                }
+            }
+
+            updateButtonEffects(mouseX, mouseY) {
+                this.buttonStates.forEach((state, button) => {
+                    const rect = button.getBoundingClientRect();
+                    
+                    // Update button rect if changed
+                    if (!this.rectsEqual(rect, state.rect)) {
+                        state.rect = rect;
+                        state.rays = this.generateButtonRays(button);
+                    }
+
+                    // Calculate distance from mouse to button center
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    const mouseDistance = this.getDistance(mouseX, mouseY, centerX, centerY);
+                    const maxDistance = window.innerWidth * 0.2; // 20% of viewport width
+                    
+                    // Calculate base intensity from mouse proximity
+                    let targetIntensity = state.isHovered ? 1 : 
+                        Math.max(0, 1 - (mouseDistance / maxDistance));
+
+                    // Smooth intensity transitions
+                    state.intensity += (targetIntensity - state.intensity) * 0.1;
+
+                    // Update ray intensities
+                    state.rays.forEach(ray => {
+                        const rayDistance = this.getDistance(mouseX, mouseY, ray.baseX, ray.baseY);
+                        const rayInfluence = Math.max(0, 1 - (rayDistance / (maxDistance * 0.5)));
+                        
+                        ray.intensity = Math.max(
+                            state.intensity * 0.3, // Base intensity from button state
+                            rayInfluence // Additional intensity from mouse proximity
+                        );
+
+                        // Update ray length based on intensity
+                        ray.length = ray.intensity * (rect.width * 0.3);
+                    });
+
+                    // Apply visual effects
+                    this.applyButtonEffects(state);
+                });
+            }
+
+            applyButtonEffects(state) {
+                const { element, intensity, rays } = state;
+                
+                // Update button styles
+                const borderIntensity = 0.2 + (intensity * 0.3);
+                const glowIntensity = intensity * 0.5;
+                
+                element.style.borderColor = `rgba(255, 255, 255, ${borderIntensity})`;
+                element.style.boxShadow = `0 0 ${glowIntensity * 20}px rgba(255, 255, 255, ${glowIntensity})`;
+                
+                // Update pseudo-element glow
+                const before = element.querySelector('::before');
+                if (before) {
+                    before.style.borderColor = `rgba(255, 255, 255, ${intensity * 0.25})`;
+                }
+            }
+
+            // Utility functions
+            getDistance(x1, y1, x2, y2) {
+                const dx = x2 - x1;
+                const dy = y2 - y1;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+
+            rectsEqual(rect1, rect2) {
+                return rect1.left === rect2.left && 
+                       rect1.top === rect2.top && 
+                       rect1.width === rect2.width && 
+                       rect1.height === rect2.height;
+            }
+
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+
+            handleResize() {
+                this.buttonStates.forEach((state, button) => {
+                    state.rect = button.getBoundingClientRect();
+                    state.rays = this.generateButtonRays(button);
+                });
+            }
+
+            init() {
+                this.pathLength = this.path.getTotalLength();
+                this.generateVectorField();
+                this.setupEventListeners();
+                this.animate();
+            }
+
+            generateVectorField() {
+                this.vectorPoints = [];
+                let distance = 0;
+                
+                while (distance <= this.pathLength) {
+                    const point = this.path.getPointAtLength(distance);
+                    const tangent = this.calculateTangent(distance);
+                    const normal = this.calculateNormal(tangent);
+                    
+                    this.vectorPoints.push({
+                        position: point,
+                        tangent: tangent,
+                        normal: normal,
+                        influence: 0.1,  // Starting influence
+                        flow: 0.0
+                    });
+                    
+                    distance += this.vectorSpacing;
+                }
+            }
+
+            calculateTangent(distance) {
+                const delta = 0.1;
+                const p1 = this.path.getPointAtLength(Math.max(0, distance - delta));
+                const p2 = this.path.getPointAtLength(Math.min(this.pathLength, distance + delta));
+                
+                const dx = p2.x - p1.x;
+                const dy = p2.y - p1.y;
+                const len = Math.sqrt(dx * dx + dy * dy);
+                
+                return {
+                    x: dx / len,
+                    y: dy / len
+                };
+            }
+
+            calculateNormal(tangent) {
+                return {
+                    x: -tangent.y,
+                    y: tangent.x
+                };
+            }
+
+            calculateColor(intensity) {
+                const alpha = Math.min(1, intensity * 0.8);
+                const rgb = Math.min(255, Math.floor(255 * intensity));
+                return `rgba(${rgb}, ${rgb}, ${rgb}, ${alpha})`;
+            }
+
+            updateLighting(mouseX, mouseY) {
+                // Cache SVG bounds to avoid recalculating for each vector point
+                const svgRect = this.svg.getBoundingClientRect();
+                
+                // Pre-calculate matrix transform to avoid repeated calls
+                const matrix = this.svg.getScreenCTM();
+                
+                // Create reusable SVG point for transforms
+                const screenPoint = this.svg.createSVGPoint();
+                
+                // Update orbital positions first
+                const orbitalPositions = this.orbitalSystems.map(orbit => {
+                    orbit.angle += orbit.speed;
+                    
+                    // Constrain orbital positions within SVG bounds for better visual effect
+                    return {
+                        x: Math.min(Math.max(
+                            orbit.centerX + Math.cos(orbit.angle) * orbit.radius,
+                            svgRect.left
+                        ), svgRect.right),
+                        y: Math.min(Math.max(
+                            orbit.centerY + Math.sin(orbit.angle) * orbit.radius,
+                            svgRect.top
+                        ), svgRect.bottom),
+                        intensity: orbit.intensity
+                    };
+                });
+
+                // Batch process vector points for better performance
+                this.vectorPoints.forEach(vector => {
+                    // Transform vector position only once
+                    screenPoint.x = vector.position.x;
+                    screenPoint.y = vector.position.y;
+                    const transformedPoint = screenPoint.matrixTransform(matrix);
+                    
+                    // Calculate maximum orbital influence
+                    let maxOrbitalInfluence = 0;
+                    orbitalPositions.forEach(orbit => {
+                        const influence = this.calculatePointInfluence(
+                            orbit.x,
+                            orbit.y,
+                            transformedPoint
+                        ) * orbit.intensity;
+                        maxOrbitalInfluence = Math.max(maxOrbitalInfluence, influence);
+                    });
+
+                    // Calculate mouse influence only if mouse is moving
+                    const mouseInfluence = this.isMouseMoving ? 
+                        this.calculatePointInfluence(mouseX, mouseY, transformedPoint) * 1.5 : 0;
+                    
+                    // Use the stronger of the two influences
+                    const totalInfluence = Math.max(mouseInfluence, maxOrbitalInfluence);
+                    
+                    // Smooth influence transitions for better visual effect
+                    if (totalInfluence > 0) {
+                        vector.influence = Math.max(
+                            vector.influence,
+                            totalInfluence * this.vectorFieldStrength
+                        );
+                    } else {
+                        // Gradual decay when no influence present
+                        vector.influence = Math.max(0.1, vector.influence * 0.95);
+                    }
+                    
+                    // Update flow with reduced calculations
+                    vector.flow = vector.flow * (1 - this.vectorField.flowSpeed) + 
+                                (Math.random() - 0.5) * this.vectorField.turbulence;
+                });
+                
+                // Apply smoothing and update path appearance
+                requestAnimationFrame(() => {
+                    this.smoothVectorField();
+                    this.applyVectorFieldToPath();
+                });
+            }
+            smoothVectorField() {
+                // Create a new array to store smoothed values
+                // Using map with spread operator to create deep copies of vector points
+                // This prevents mutation of original points during smoothing
+                const smoothed = this.vectorPoints.map(vector => ({...vector}));
+                
+                // Iterate through all points except first and last
+                // This creates a moving average window of size 3
+                // Skip edge points since they don't have both neighbors
+                for (let i = 1; i < this.vectorPoints.length - 1; i++) {
+                    // Cache references to previous, current and next points
+                    // This reduces property lookups in the inner loop
+                    const prev = this.vectorPoints[i - 1];
+                    const curr = this.vectorPoints[i];
+                    const next = this.vectorPoints[i + 1];
+                    
+                    // Calculate average flow and influence using the 3-point window
+                    // Division by 3 could be optimized to multiplication by 1/3
+                    // But modern JS engines likely optimize this automatically
+                    smoothed[i].flow = (prev.flow + curr.flow + next.flow) / 3;
+                    smoothed[i].influence = (prev.influence + curr.influence + next.influence) / 3;
+                }
+                
+                // Replace original points with smoothed version
+                // This happens only once per frame, minimizing array assignments
+                this.vectorPoints = smoothed;
+            }
+
+            applyVectorFieldToPath() {
+                // Cache DOM elements and create gradient only once
+                if (!this.defs) {
+                    this.defs = this.svg.querySelector('defs') || 
+                               this.svg.insertBefore(document.createElementNS('http://www.w3.org/2000/svg', 'defs'), 
+                               this.svg.firstChild);
+                    
+                    this.gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+                    this.gradient.id = 'pathGradient';
+                    this.gradient.setAttribute('gradientUnits', 'userSpaceOnUse');
+                    
+                    const bbox = this.path.getBBox();
+                    this.gradient.setAttribute('x1', bbox.x);
+                    this.gradient.setAttribute('y1', bbox.y);
+                    this.gradient.setAttribute('x2', bbox.x + bbox.width);
+                    this.gradient.setAttribute('y2', bbox.y + bbox.height);
+                    
+                    this.defs.appendChild(this.gradient);
+                    
+                    // Set stroke style once
+                    this.path.style.stroke = 'url(#pathGradient)';
+                    this.path.style.strokeWidth = '1px';
+                }
+
+                // Reuse existing stops or create new ones
+                while (this.gradient.children.length < this.vectorPoints.length) {
+                    this.gradient.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'stop'));
+                }
+                
+                // Update stop colors directly
+                this.vectorPoints.forEach((vector, i) => {
+                    const stop = this.gradient.children[i];
+                    stop.setAttribute('offset', (i / (this.vectorPoints.length - 1) * 100) + '%');
+                    stop.setAttribute('stop-color', this.calculateColor(this.calculateVectorIntensity(vector)));
+                });
+            }
+
+            calculateVectorIntensity(vector) {
+                // Combine multiplications to reduce operations
+                return vector.influence * this.vectorFieldStrength * (Math.cos(vector.flow) * 0.5 + 0.5) * this.vectorField.density;
+            }
+
+            setupEventListeners() {
+                document.addEventListener('mousemove', (e) => {
+                    this.mouse.x = e.clientX;
+                    this.mouse.y = e.clientY;
+                    this.isMouseMoving = true;
+                    
+                    clearTimeout(this.mouseTimeout);
+                    this.mouseTimeout = setTimeout(() => {
+                        this.isMouseMoving = false;
+                    }, 100);
+                });
+
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        this.generateVectorField();
+                        this.influenceRadius = window.innerWidth * 0.08;
+                        this.updateOrbitalSystems();
+                    }, 100);
+                });
+            }
+
+            animate(timestamp) {
+                if (timestamp - this.lastRender >= this.fpsInterval) {
+                    this.lastRender = timestamp;
+                    
+                    if (this.isMouseMoving) {
+                        this.updateButtonEffects(this.mouse.x, this.mouse.y);
+                    }
+                    
+                    this.updateOrbitalMotion();
+                    this.updateLighting(this.mouse.x, this.mouse.y);
+                }
+                
+                requestAnimationFrame(this.animate.bind(this));
+            }
+
+            calculatePointInfluence(pointX, pointY, transformedPoint) {
+                const dx = pointX - transformedPoint.x;
+                const dy = pointY - transformedPoint.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < this.influenceRadius) {
+                    return Math.pow(1 - (distance / this.influenceRadius), 2);
+                }
+                return 0;
+            }
+
+            addOrbitalSystem(config) {
+                const radiusVw = config.radiusVw || 20;
+                this.orbitalConfigs.push({
+                    angle: config.angle || 0,
+                    radiusVw: radiusVw,
+                    speed: config.speed || 0.002,
+                    intensity: config.intensity || 1.0
+                });
+                this.updateOrbitalSystems();
+            }
+
+            removeOrbitalSystem(index) {
+                if (index >= 0 && index < this.orbitalSystems.length) {
+                    this.orbitalSystems.splice(index, 1);
+                }
+            }
+
+            updateOrbitalSystems() {
+                this.orbitalSystems = this.orbitalConfigs.map(config => ({
+                    angle: config.angle,
+                    radius: (window.innerWidth * config.radiusVw) / 100,
+                    speed: config.speed,
+                    centerX: window.innerWidth / 2,
+                    centerY: window.innerHeight / 2,
+                    intensity: config.intensity,
+                    color: {r: 255, g: 255, b: 255}
+                }));
+            }
+
+            updateOrbitalMotion() {
+                const time = performance.now() * 0.001;
+                
+                this.orbitalSystems.forEach((orbit, index) => {
+                    // Add slight oscillation to radius
+                    const radiusModulation = Math.sin(time * 0.5) * (window.innerWidth * 0.02);
+                    orbit.radius = (window.innerWidth * this.orbitalConfigs[index].radiusVw) / 100 + radiusModulation;
+                    
+                    // Add varying speeds based on position
+                    const baseSpeed = this.orbitalConfigs[index].speed;
+                    orbit.speed = baseSpeed * (1 + Math.sin(time * 0.3) * 0.2);
+                    
+                    // Add slight oscillation to intensity
+                    orbit.intensity = this.orbitalConfigs[index].intensity * (0.8 + Math.sin(time + index) * 0.2);
+                });
+            }
+
+            generateButtonVectors() {
+                this.buttons.forEach(button => {
+                    const rect = button.getBoundingClientRect();
+                    const vectors = [];
+                    const spacing = 10; // Smaller spacing for buttons
+                    
+                    // Generate points around button perimeter
+                    for (let x = rect.left; x <= rect.right; x += spacing) {
+                        vectors.push({
+                            position: { x, y: rect.top },
+                            influence: 0.1,
+                            flow: 0
+                        });
+                        vectors.push({
+                            position: { x, y: rect.bottom },
+                            influence: 0.1,
+                            flow: 0
+                        });
+                    }
+                    for (let y = rect.top; y <= rect.bottom; y += spacing) {
+                        vectors.push({
+                            position: { x: rect.left, y },
+                            influence: 0.1,
+                            flow: 0
+                        });
+                        vectors.push({
+                            position: { x: rect.right, y },
+                            influence: 0.1,
+                            flow: 0
+                        });
+                    }
+                    
+                    this.buttonVectors.push({
+                        element: button,
+                        vectors: vectors
+                    });
+                });
+            }
+        }
+
+        class StarField {
+            constructor() {
+                this.canvas = document.createElement('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.stars = [];
+                this.starCount = 1000; // Number of stars
+                
+                // Style and position the canvas
+                Object.assign(this.canvas.style, {
+                    position: 'fixed',
+                    top: '0',
+                    left: '0',
+                    width: '100%',
+                    height: '100%',
+                    pointerEvents: 'none',
+                    zIndex: '-1'
+                });
+                
+                document.body.insertBefore(this.canvas, document.body.firstChild);
+                
+                this.resize();
+                this.initStars();
+                window.addEventListener('resize', () => this.resize());
+                this.animate();
+            }
+
+            resize() {
+                this.width = window.innerWidth;
+                this.height = window.innerHeight;
+                this.canvas.width = this.width;
+                this.canvas.height = this.height;
+            }
+
+            initStars() {
+                this.stars = Array.from({ length: this.starCount }, () => ({
+                    x: Math.random() * this.width,
+                    y: Math.random() * this.height,
+                    size: Math.random() * 1,
+                    opacity: Math.random() * 0.8,
+                    speed: 0.01 + Math.random() * 0.01,
+                    phase: Math.random() * Math.PI * 2
+                }));
+            }
+
+            drawStar(star) {
+                const opacity = (Math.sin(star.phase) + 1) * 0.5 * star.opacity;
+                this.ctx.beginPath();
+                this.ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+                this.ctx.fill();
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                
+                // Update and draw stars
+                this.stars.forEach(star => {
+                    star.phase += star.speed;
+                    this.drawStar(star);
+                    
+                    // Randomly reposition stars that are nearly invisible
+                    if (Math.sin(star.phase) < -0.95 && Math.random() < 0.1) {
+                        star.x = Math.random() * this.width;
+                        star.y = Math.random() * this.height;
+                        star.phase = 0;
+                    }
+                });
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // Initialize both effects when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new StarField();
+            new LightingEffect();
+        });
+    </script>
+</body>
 </html>
